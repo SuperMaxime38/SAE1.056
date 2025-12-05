@@ -1,0 +1,37 @@
+.agences {
+    width: 80%;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agences h2 {
+    text-align: center;
+}
+
+.agences ul {
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.agences li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.agences-map-infos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.agences-map-infos iframe {
+    flex-grow: 3;
+    width: 300px;
+    height: 50vh;
+    flex-shrink: 2;
+}
+
+.agences-map-infos div {
+    flex-grow: 2;
+}
