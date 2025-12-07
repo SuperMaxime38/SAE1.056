@@ -1,6 +1,9 @@
+body {
+    font-family: 'Questrial', sans-serif;
+}
+
 .agences {
     width: 80%;
-    border: 1px solid red;
     margin-left: auto;
     margin-right: auto;
 }
@@ -11,8 +14,6 @@
 
 .agences ul {
     padding: 0;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .agences li {
@@ -23,15 +24,50 @@
 .agences-map-infos {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .agences-map-infos iframe {
-    flex-grow: 3;
-    width: 300px;
-    height: 50vh;
-    flex-shrink: 2;
+    flex-grow: 1;
+    width: 350px;
+    height: 350px;
+    flex-shrink: 3;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .agences-map-infos div {
     flex-grow: 2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agences-map-infos div a { /* lien telephone */
+    text-decoration: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.glass {
+    border-radius: 3rem;  
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 20px;
+
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    filter: url(#lensFilter) saturate(120%) brightness(1.15);
+    z-index: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
