@@ -1,3 +1,7 @@
+:root {
+    --purple: rgb(159, 71, 170);
+}
+
 body {
     font-family: 'Questrial', sans-serif;
 }
@@ -31,7 +35,7 @@ body {
 }
 
 .agence-selected {
-    color: rgb(159, 71, 170);
+    color: var(--purple);
     font-size: 24pt;
     font-weight: bold;
 }
@@ -88,4 +92,15 @@ h3 {
     padding: 20px;
     margin: 20px;
     flex-grow: 2;
+}
+
+.agences-infos a {
+    text-decoration: none;
+    color: black;
+}
+
+.agences-infos a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+    cursor: pointer;
 }
