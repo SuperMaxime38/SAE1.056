@@ -33,20 +33,20 @@ nav:hover {
     transform: scale(1.02);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
-img{
+nav img{
     border-radius: 7px;
     height: 15%; 
     width: 20%; 
 }
 
-a{
+nav a{
     color: var(--lg-text);
     text-decoration: none;
     padding: 0 5px;
     transition: all 0.3s ease-in-out;
 
 }
-a:hover{
+ nav a:hover{
 transform: scale(1.2);
 transition: all 0.4s ease-in-out;
 
