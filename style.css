@@ -193,3 +193,44 @@ h3 {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     white-space: nowrap;
 }
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    border-top: solid 2px rgb(87, 85, 85);
+    background-color: rgb(182, 176, 176);
+    color: rgb(59, 58, 56);
+    padding: 10px 0; 
+}
+
+footer div {
+    height : 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer div:first-child{
+    padding-left: 70px;
+}
+footer div:last-child{
+    padding-right: 70px;
+}
+footer section{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+footer h4{
+    font-style: italic;
+    font: bold 16px Arial, sans-serif;
+}
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+footer div nav ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0%;
+}
