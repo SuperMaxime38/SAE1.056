@@ -1,3 +1,43 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    border-top: solid 2px rgb(87, 85, 85);
+    background-color: rgb(182, 176, 176);
+    color: rgb(59, 58, 56);
+    padding: 10px 0; 
+}
+
+footer div {
+    height : 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer div:first-child{
+    padding-left: 70px;
+}
+footer div:last-child{
+    padding-right: 70px;
+}
+footer section{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+footer h4{
+    font-style: italic;
+    font: bold 16px Arial, sans-serif;
+}
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+footer div nav ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0%;
+}
+
 :root { 
   --lg-bg-color: rgba(255, 255, 255, 0.25);
   --lg-highlight: rgba(255, 255, 255, 0.75);
@@ -9,6 +49,8 @@
 
 body {
     font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction:column;
 }
 
 .agences {
