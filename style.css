@@ -3,13 +3,10 @@ footer {
     border-top: solid 2px rgb(87, 85, 85);
     background-color: rgb(182, 176, 176);
     color: rgb(59, 58, 56);
-    padding: 10px 0; 
-}
-
-footer div {
-    height : 100%;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
+    align-items: top;
 }
 footer div:first-child{
     padding-left: 70px;
@@ -17,25 +14,19 @@ footer div:first-child{
 footer div:last-child{
     padding-right: 70px;
 }
-footer section{
-    position: absolute;
-    bottom: 2px;
-    right: 5px;
-}
-footer h4{
-    font-style: italic;
-    font: bold 16px Arial, sans-serif;
-}
-footer a{
+ footer h4{
+    margin-top: 0;
+ }
+ footer a{
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
-footer div nav ul{
+ 
+ footer ul{
     list-style-type: none;
     text-align: center;
-    padding: 0%;
+    padding: 0;
 }
-
 :root { 
   --lg-bg-color: rgba(255, 255, 255, 0.25);
   --lg-highlight: rgba(255, 255, 255, 0.75);
