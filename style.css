@@ -1,15 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
 footer {
     position: absolute;
     bottom: 0;
@@ -50,3 +38,200 @@ footer div nav ul{
     padding: 0%;
 }
 
+:root { 
+  --lg-bg-color: rgba(255, 255, 255, 0.25);
+  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-text: #ffffff;
+  --lg-red: #fb4268;
+  --lg-grey: #444739;
+  --purple: rgb(159, 71, 170);
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction:column;
+}
+
+.agences {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agences h2 {
+    text-align: center;
+    font-size: 26pt;
+}
+
+.agences ul {
+    padding: 0;
+}
+
+.agences li {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.agence-unselected { /* lien agence */
+    text-decoration: none;
+    font-size: 24pt;
+    font-weight: bold;
+    color: black;
+}
+
+.agence-selected {
+    color: var(--purple);
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.agences-map-infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.agences-map-infos iframe {
+    flex-grow: 1;
+    width: 350px;
+    height: 350px;
+    flex-shrink: 3;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+.agences-map-infos div a { /* lien telephone */
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3rem;  
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    filter: url(#lensFilter) saturate(120%) brightness(1.15);
+    z-index: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.agences-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    flex-grow: 2;
+}
+
+.agences-infos a {
+    text-decoration: none;
+    color: black;
+}
+
+.agences-infos a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.newsletter-box {
+    background-color: var(--lg-bg-color);
+    font-family: 'Questrial', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    padding: 50px;
+    flex-wrap: wra}
+
+
+.newsletter-left {
+    width: 500px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-title {
+    background-color: var(--lg-grey);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    width: fit-content;
+    border-radius: 4px 4px 0 0; 
+    line-height: 1;
+}
+
+.newslette-form {
+    display: flex;
+    width: 100%; 
+    height: 35px; 
+}
+
+.newslette-form input {
+    flex-grow: 1; 
+    background-color:#f0eded; 
+    border: none;
+    border-radius: 0 0 0 4px; 
+    padding-left: 40px;
+    font-size: 14px;
+    color: #333;
+
+
+    background-image:url("email.png") ;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 16px;
+}
+
+.newslette-form input::placeholder {
+    color: #aeb5bc;
+}
+
+.newslette-form button {
+    background-color: var(--lg-grey);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; 
+}
+
+
+.newsletter-text {
+    font-size: 14px;
+    color: #3d4e5f;
+    margin-top: 8px;
+
+}
+
+.newsletter-right {
+    background: linear-gradient(to bottom right, #f0eded, #ffffff);
+    color: #3d4e5f;
+    padding: 30px 60px;
+    border-radius: 25px;
+    font-size: 21px;
+    font-weight: 400;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    white-space: nowrap;
+}
