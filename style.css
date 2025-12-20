@@ -1,4 +1,20 @@
 
+:root { 
+  --lg-bg-color: rgba(255, 255, 255, 0.25);
+  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-text: #ffffff;
+  --lg-red: #fb4268;
+  --lg-grey: #444739;
+  --purple: rgb(159, 71, 170);
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction:column;
+    margin: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -81,21 +97,6 @@ footer div:last-child{
     list-style-type: none;
     text-align: center;
     padding: 0;
-}
-:root { 
-  --lg-bg-color: rgba(255, 255, 255, 0.25);
-  --lg-highlight: rgba(255, 255, 255, 0.75);
-  --lg-text: #ffffff;
-  --lg-red: #fb4268;
-  --lg-grey: #444739;
-  --purple: rgb(159, 71, 170);
-}
-
-body {
-    font-family: 'Questrial', sans-serif;
-    display: flex;
-    flex-direction:column;
-    margin: 0;
 }
 
 .agences {
@@ -280,4 +281,24 @@ h3 {
     white-space: nowrap;
 }
 
+.secteurs {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.secteurs-slider{
+    display: flex;
+
+}
+
+.secteurs-slider h2 {
+    margin: 0;
+}
+
+.secteurs-list {
+    display: flex;
+    justify-content: space-between;
+}
 
