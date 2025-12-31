@@ -1,7 +1,7 @@
-lastsecteur_nb = 7; // Il y a 7 secteurs d'activité
-selectedSecteur = 1; // Secteur par defaut
+// ##### VARAIABLES #####
 
-secteur_infos = {
+const lastsecteur_nb = 7; // Il y a 7 secteurs d'activité
+const secteur_infos = {
     
     "secteur1": {
         "name": "Infrastructure Digitale",
@@ -28,23 +28,61 @@ secteur_infos = {
     },
     "secteur5": {
         "name": "Bâtir un environnement numérique de confiance",
-        "description": "Des mots"
+        "description": "<h4>Choisir les services adaptés à la criticité de vos activités</h4>Certains échanges d’information (E-mail,vidéoconférence) sont plus importants que d'autres en entreprise (comme un conseil d'administration ) il est donc nécessaire d’adapter les outils de communication  en fonction de son importance. Orange accompagne les entreprises dans l’amélioration et l'installation de systèmes de sécurité adaptés."
+        + "<h4>Protéger vos données et créer des IA responsables</h4>Quand on navigue sur un site, les actions et données enregistrées par l’entreprise doivent être protégées contre un potentiel vol de données. Le respect du RGPD est obligatoire en Europe, Orange aide les sites internet à être plus sûrs pour protéger les utilisateurs de la fraude ainsi que pour respecter et appliquer la lois. L'Intelligence Artificielle doit être \"responsable\" : elle doit respecter les lois actuelles et être transparente, Orange aide à créer des IA qui respectent à la fois la loi et les droits des personnes."
+        + "<h4>S’appuyer sur un socle d’infrastructure résilient et sécurisé</h4>Orange Cyberdéfense aide les entreprises à surveiller, détecter et bloquer les attaques informatiques."
     },
     "secteur6": {
         "name": "Cybersécurité",
-        "description": "Des mots"
+        "description": "<h4>Sécuriser l'entreprise</h4>Grâce à la connaissance des tendances et des vulnérabilités, nous anticipons les menaces, évaluons les risques et élaborons des stratégies proactives pour renforcer les défenses de nos clients face aux cyberattaques et à leurs évolutions."
     },
     "secteur7": {
         "name": "La transition numérique et écologique de cette entreprise",
-        "description": "Des mots"
+        "description": "<h4>Les enjeux de Numérique Responsable</h4>Comprendre et mesurer son empreinte carbone et environnementale La première étape d’une transformation responsable consiste à comprendre et mesurer l’empreinte de son activité. Orange propose des produits respectant les nouvelles réglementations et accompagne les entreprises voulant respecter ces réglementations."
+        + "<h4>Utiliser l’IT au service de votre transition écologique</h4>Utiliser les technologies de l’internet au service de votre transition écologique Orange Business propose des solutions utilisant des outils numériques pour optimiser l’efficacité énergétique"
+        + "<h4>Favoriser des produits et services IT à impact environnemental réduit</h4>Orange travaille sur 3 sources afin de réduire la pollution numérique : nos équipements, nos infrastructures réseaux avec des infrastructures cloud optimiséesn nos Data Centers en France et nous travaillons à l’optimisation de neuf Data Centers en Europe."
     },
 
 };
 
+selectedSecteur = 1; // Secteur par defaut
+sideSecteurHeight = 15;
+
+// ##### FUNCTIONS #####
+
+
+// EVENTS HANDLER
+
+// On page loading
 window.onload = function() {
     // Position par defaut:
+    checkResize();
     selectSecteur(selectedSecteur);
 };
+
+// RESIZE EVENT FOR MOBILE COMPATIBILITY
+window.onresize = function() {
+    checkResize();
+    selectSecteur(selectedSecteur);
+}
+
+
+// Utils FUNCTIONS
+
+/**
+ * Vérifie la largeur de la fenêtre et modifie la hauteur des secteurs en fonction
+ */
+function checkResize() {
+    width = window.innerWidth;
+
+    if(width <= 700) {
+        sideSecteurHeight = 25;
+    } else if (width <= 980) {
+        sideSecteurHeight = 20;
+    } else {
+        sideSecteurHeight = 15;
+    }
+}
 
 /**
  * Sectionne le secteur suivant
@@ -101,16 +139,9 @@ function selectSecteur(secteur) {
 function highlight(left, selected, right) {
 
     // Positionnement des secteurs
-    document.getElementById(left).setAttribute("style", "display: block; bottom: 2vh; left: 5vw; width: 19vw; height: 15vh;");
-    //document.getElementById(selected).setAttribute("style", "display: block; bottom: 1vh; left: 29vw; width: 22vw; height: 17vh; box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);");
-    document.getElementById(right).setAttribute("style", "display: block; bottom: 2vh; left: 56vw; width: 19vw; height: 15vh;");
-
-    document.getElementById(selected).style.display = "block";
-    document.getElementById(selected).style.bottom = "1vh";
-    document.getElementById(selected).style.left = "29vw";
-    document.getElementById(selected).style.width = "22vw";
-    document.getElementById(selected).style.height = "17vh";
-    document.getElementById(selected).style.boxShadow = "box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5)";
+    document.getElementById(left).setAttribute("style", "display: flex; bottom: 2vh; left: 5vw; width: 19vw; height: " + sideSecteurHeight + "vh;");
+    document.getElementById(selected).setAttribute("style", "display: flex; bottom: 1vh; left: 29vw; width: 22vw; height: " + (sideSecteurHeight+2) + "vh; box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);");
+    document.getElementById(right).setAttribute("style", "display: flex; bottom: 2vh; left: 56vw; width: 19vw; height: " + sideSecteurHeight + "vh;");
 
     // Affichage des infos du secteur
     document.getElementById("secteur-name").innerHTML = secteur_infos[selected]["name"];

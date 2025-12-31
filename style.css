@@ -315,10 +315,39 @@ h3 {
 .secteurs-list>div {
     position: absolute;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .secteur-description {
     width: 80%;
     margin: 30px auto;
     text-align: center;
+}
+
+#secteur-description {
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .secteurs-list {
+        height: 23vh;
+    }
+    #secteur-description {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .secteurs-list {
+        height: 28vh;
+    }
+    #secteur-description {
+        width: 100%;
+    }
 }
