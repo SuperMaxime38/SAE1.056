@@ -74,14 +74,21 @@ window.onresize = function() {
  */
 function checkResize() {
     width = window.innerWidth;
+    height = window.innerHeight;
 
-    if(width <= 700) {
+    // Width: Si le portable est en mode portrait
+    // Height: Si le portable est en mode paysage
+
+    if(width <= 700 || height <= 700) {
         sideSecteurHeight = 25;
-    } else if (width <= 980) {
+    } else if (width <= 980 || height <= 980) {
         sideSecteurHeight = 20;
     } else {
         sideSecteurHeight = 15;
     }
+
+    // Un seul élément possède la classe "secteurs-list", donc on prend le premier
+    document.getElementsByClassName("secteurs-list").item(0).style.height = "max(280px, " + (sideSecteurHeight+3) + "vh)";
 }
 
 /**
@@ -139,9 +146,9 @@ function selectSecteur(secteur) {
 function highlight(left, selected, right) {
 
     // Positionnement des secteurs
-    document.getElementById(left).setAttribute("style", "display: flex; bottom: 2vh; left: 5vw; width: 19vw; height: " + sideSecteurHeight + "vh;");
-    document.getElementById(selected).setAttribute("style", "display: flex; bottom: 1vh; left: 29vw; width: 22vw; height: " + (sideSecteurHeight+2) + "vh; box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);");
-    document.getElementById(right).setAttribute("style", "display: flex; bottom: 2vh; left: 56vw; width: 19vw; height: " + sideSecteurHeight + "vh;");
+    document.getElementById(left).setAttribute("style", "display: flex; bottom: 2vh; left: 5vw; width: 19vw; height: max(260px, " + sideSecteurHeight + "vh);");
+    document.getElementById(selected).setAttribute("style", "display: flex; bottom: 1vh; left: 29vw; width: 22vw; height: max(270px, " + (sideSecteurHeight+2) + "vh); box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);");
+    document.getElementById(right).setAttribute("style", "display: flex; bottom: 2vh; left: 56vw; width: 19vw; height: max(260px, " + sideSecteurHeight + "vh);");
 
     // Affichage des infos du secteur
     document.getElementById("secteur-name").innerHTML = secteur_infos[selected]["name"];
