@@ -49,7 +49,7 @@ agences_data = {
         "tel": "+33 4 76 44 50 50"
     }
 
-}
+};
 
 function selectAgence(agence_id) {
 
