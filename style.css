@@ -1,4 +1,20 @@
 
+:root { 
+  --lg-bg-color: rgba(255, 255, 255, 0.25);
+  --lg-highlight: rgba(255, 255, 255, 0.75);
+  --lg-text: #ffffff;
+  --lg-red: #fb4268;
+  --lg-grey: #444739;
+  --purple: rgb(159, 71, 170);
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction:column;
+    margin: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -82,21 +98,6 @@ footer div:last-child{
     text-align: center;
     padding: 0;
 }
-:root { 
-  --lg-bg-color: rgba(255, 255, 255, 0.25);
-  --lg-highlight: rgba(255, 255, 255, 0.75);
-  --lg-text: #ffffff;
-  --lg-red: #fb4268;
-  --lg-grey: #444739;
-  --purple: rgb(159, 71, 170);
-}
-
-body {
-    font-family: 'Questrial', sans-serif;
-    display: flex;
-    flex-direction:column;
-    margin: 0;
-}
 
 .agences {
     width: 80%;
@@ -106,7 +107,7 @@ body {
 
 .agences h2 {
     text-align: center;
-    font-size: 26pt;
+    font-size: clamp(0.25rem, 1vw + 1.25rem, 4.25rem);
 }
 
 .agences ul {
@@ -121,7 +122,7 @@ body {
 
 .agence-unselected { /* lien agence */
     text-decoration: none;
-    font-size: 24pt;
+    font-size: clamp(0.1rem, 1vw + 0.9rem, 4rem); /* Permet d'adapter la taille du texte en fonction de la taille de l'écran (1vw+1rem permet de prendre en compte le niveau de zoom) */
     font-weight: bold;
     color: black;
 }
@@ -130,6 +131,7 @@ body {
     color: var(--purple);
     font-size: 24pt;
     font-weight: bold;
+    font-size: clamp(0.1rem, 1vw + 0.9rem, 4rem);
 }
 
 .agences-map-infos {
@@ -141,7 +143,8 @@ body {
 .agences-map-infos iframe {
     flex-grow: 1;
     width: 350px;
-    height: 350px;
+    min-height: 350px;
+    height: auto;
     flex-shrink: 3;
     border-radius: 50px;
     margin: 20px;
@@ -183,6 +186,8 @@ h3 {
     padding: 20px;
     margin: 20px;
     flex-grow: 2;
+    height: fit-content;
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
 }
 
 .agences-infos a {
@@ -280,4 +285,69 @@ h3 {
     white-space: nowrap;
 }
 
+.secteurs {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
 
+.secteurs-slider{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.secteurs-slider div a {
+    padding: 1px 8px;
+    border-radius: 30px;
+    background-color: rgb(200, 200, 200);
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
+
+.secteurs-slider h2 {
+    margin: auto 10px;
+}
+
+.secteurs-list {
+    display: flex;
+    justify-content: space-between;
+    height: 18vh; /* Necessaire pr le placement en absolu des divs enfants */
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+}
+
+.secteurs-list>div {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.secteur-description {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+}
+
+#secteur-description {
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1040px) {
+    #secteur-description {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    #secteur-description {
+        width: 100%;
+    }
+}
