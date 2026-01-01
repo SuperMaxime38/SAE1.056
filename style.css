@@ -23,13 +23,6 @@ body {
     overflow-x: hidden;     
 }
 
-h3 {
-    text-decoration: none;
-    border-bottom: 3px solid rgb(var(--ob-orange));
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
 
 :root { 
   --lg-bg-color: rgba(255, 255, 255, 0.25);
@@ -151,10 +144,9 @@ nav a:hover {
 }
 
 .agences {
-    width: auto;
-    margin-left: 5%;
-    margin-right: 80px; 
-    max-width: 1400px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .agences h2 {
@@ -200,13 +192,6 @@ nav a:hover {
 }
 
 .agences-map-infos iframe {
-    background: var(--glass-bg);
-    box-shadow: var(--glass-shadow);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px; 
-    padding: 10px;       
-    box-sizing: border-box; 
     flex-grow: 1;
     width: 350px;
     min-height: 350px;
@@ -232,6 +217,10 @@ th, td {
 
 h3 {
     text-decoration: underline;
+    /* border-bottom: 3px solid rgb(var(--ob-orange)); */ /* JSP pk ya ça donc on l'enlève ! */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .glass {
@@ -246,8 +235,6 @@ h3 {
 }
 
 .agences-infos {
-    flex: 1 1 300px;    
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -255,7 +242,7 @@ h3 {
     margin: 20px;
     flex-grow: 2;
     height: fit-content;
-    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.7rem);
 }
 
 .agences-infos a {
@@ -456,6 +443,10 @@ footer a:hover { color: rgb(var(--ob-orange)); }
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+    }
+
+}
 .secteurs {
     width: 80%;
     margin: 30px auto;
