@@ -6,7 +6,25 @@
     --glass-bg: rgba(220, 212, 212, 0.35); 
     --glass-border: rgba(255, 255, 255, 0.4); 
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    --glass-blur: blur(10px); 
+    --glass-blur: blur(10px);
+
+    --lg-bg-color: rgba(255, 255, 255, 0.25);
+    --lg-highlight: rgba(255, 255, 255, 0.75);
+    --lg-text: #ffffff;
+    --lg-red: #fb4268;
+    --lg-grey: #444739;
+    --purple: rgb(159, 71, 170);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    filter: url(#lensFilter) saturate(120%) brightness(1.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
 body {
@@ -23,21 +41,47 @@ body {
     overflow-x: hidden;     
 }
 
-
-:root { 
-  --lg-bg-color: rgba(255, 255, 255, 0.25);
-  --lg-highlight: rgba(255, 255, 255, 0.75);
-  --lg-text: #ffffff;
-  --lg-red: #fb4268;
-  --lg-grey: #444739;
-  --purple: rgb(159, 71, 170);
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    margin-top: 0; 
+    background: transparent; 
+    box-shadow: none;
+    border: none;
+    backdrop-filter: none;
 }
 
-body {
-    font-family: 'Questrial', sans-serif;
-    display: flex;
-    flex-direction:column;
-    margin: 0;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px; 
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+th { 
+    background-color: rgba(0,0,0,0.85); 
+    color: white; 
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+h3 {
+    text-decoration: underline;
+    /* border-bottom: 3px solid rgb(var(--ob-orange)); */ /* JSP pk ya ça donc on l'enlève ! */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -131,17 +175,6 @@ nav a:hover {
      filter: invert(49%) sepia(89%) saturate(1906%) hue-rotate(1deg) brightness(120%) contrast(110%) drop-shadow(0 0 0.75rem white);
 }
 
-.glass {
-    box-shadow: var(--glass-shadow);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px; 
-    border-top: 1px solid rgba(255,255,255,0.7);
-    border-left: 1px solid rgba(255,255,255,0.5);
-    background: var(--glass-bg);
-}
-
 .agences {
     width: 80%;
     margin-left: auto;
@@ -203,34 +236,6 @@ nav a:hover {
 .agences-map-infos div a { /* lien telephone */
     text-decoration: none;
     margin-top: 20px;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 5px;
-}
-
-h3 {
-    text-decoration: underline;
-    /* border-bottom: 3px solid rgb(var(--ob-orange)); */ /* JSP pk ya ça donc on l'enlève ! */
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-.glass {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    filter: url(#lensFilter) saturate(120%) brightness(1.15);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
 .agences-infos {
@@ -345,38 +350,9 @@ h3 {
     color: whitesmoke;
 }
 
-table {
-    width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0; 
-    margin-top: 0; 
-    background: transparent; 
-    box-shadow: none;
-    border: none;
-    backdrop-filter: none;
-}
 .agences-infos a{
     margin-top: 30px;
     display: inline-block;
-}
-
-th, td {
-    padding: 12px 15px; 
-    text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-}
-
-th { 
-    background-color: rgba(0,0,0,0.85); 
-    color: white; 
-}
-
-th:first-child {
-    border-top-left-radius: 10px;
-}
-
-th:last-child {
-    border-top-right-radius: 10px;
 }
 
 footer {
@@ -399,6 +375,68 @@ footer ul { list-style: none; padding: 0; }
 footer li { margin-bottom: 10px; }
 footer a { text-decoration: none; color: #888; }
 footer a:hover { color: rgb(var(--ob-orange)); }
+
+.secteurs {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+}
+
+.secteurs-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.secteurs-slider>div {
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.8vw;
+}
+
+.secteurs-slider div a {
+    padding: 1px 8px;
+    border-radius: 30px;
+    background-color: rgb(200, 200, 200);
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.5rem, 1vw + 0.4rem, 2rem);
+}
+
+.secteurs-slider h2 {
+    margin: auto 10px;
+}
+
+.secteurs-list {
+    display: flex;
+    justify-content: space-between;
+    height: 18vh; /* Necessaire pr le placement en absolu des divs enfants */
+}
+
+.secteurs-list>div {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.secteur-description {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+}
+
+#secteur-description {
+    width: 80%;
+    margin: auto;
+}
 
 @media screen and (max-width: 1100px) {
 
@@ -445,59 +483,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 
     }
 
-}
-.secteurs {
-    width: 80%;
-    margin: 30px auto;
-    text-align: center;
-}
-
-.secteurs-slider{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.secteurs-slider div a {
-    padding: 1px 8px;
-    border-radius: 30px;
-    background-color: rgb(200, 200, 200);
-    text-decoration: none;
-    color: black;
-    font-size: x-large;
-}
-
-.secteurs-slider h2 {
-    margin: auto 10px;
-}
-
-.secteurs-list {
-    display: flex;
-    justify-content: space-between;
-    height: 18vh; /* Necessaire pr le placement en absolu des divs enfants */
-    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
-}
-
-.secteurs-list>div {
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.secteur-description {
-    width: 80%;
-    margin: 30px auto;
-    text-align: center;
-    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
-}
-
-#secteur-description {
-    width: 80%;
-    margin: auto;
 }
 
 @media screen and (max-width: 1040px) {
