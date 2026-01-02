@@ -1,11 +1,15 @@
 // ##### VARAIABLES #####
 
+page = "secteur";
+
 const lastsecteur_nb = 7; // Il y a 7 secteurs d'activité
+const lastservice_nb = 7; // Il y a 7 services
+
 const secteur_infos = {
     
     "secteur1": {
         "name": "Infrastructure Digitale",
-        "description": "<h4>Digital Consulting</h3>Nos équipes permettent aux entreprises d’exceller dans tous les domaines du numérique en les aidant à développer leur environnement numérique."
+        "description": "<h4>Digital Consulting</h4>Nos équipes permettent aux entreprises d’exceller dans tous les domaines du numérique en les aidant à développer leur environnement numérique."
             + "<h4>SASE</h4>Les utilisateurs peuvent utiliser ce service où qu’ils soient. Grâce à notre service, les entreprises n’ont pas à s’occuper des serveurs et permettent facilement d’en augmenter leur nombre."
             + "<h4>Cloud Networking</h4>Notre cloud est flexible et rapide, les entreprises ne subissent pas de limitations liées au réseau lors de l’ajout de nouvelles applications. Les entreprises n’ont pas à se soucier des coûts liés à l’entretien des serveurs."
             + "<h4>Optimisation multicloud</h4>Nous adaptons l’infrastructure pour améliorer les performances et la rentabilité et permet au cloud* de fonctionner partout et tout le temps. Des serveurs de secours permettent aux services d’être disponibles en permanence même en cas de panne."
@@ -45,7 +49,42 @@ const secteur_infos = {
 
 };
 
+const service_infos = {
+    
+    "service1": {
+        "name": "A",
+        "description": "aa"
+    },
+    "service2": {
+        "name": "",
+        "description": ""
+    },
+    "service3": {
+        "name": "",
+        "description": ""
+    },
+    "service4": {
+        "name": "",
+        "description": ""
+    },
+    "service5": {
+        "name": "",
+        "description": ""
+    },
+    "service6": {
+        "name": "",
+        "description": ""
+    },
+    "service7": {
+        "name": "",
+        "description": ""
+    },
+
+};
+
 selectedSecteur = 1; // Secteur par defaut
+selectedService = 1; // Service par defaut
+
 sideSecteurHeight = 15;
 
 // ##### FUNCTIONS #####
@@ -55,9 +94,19 @@ sideSecteurHeight = 15;
 
 // On page loading
 window.onload = function() {
+
     // Position par defaut:
     checkResize();
-    selectSecteur(selectedSecteur);
+
+    // Vérifie si l'on est sur la page des secteurs d'activité ou celle des services
+    if(document.getElementById("service1") != null) { // Signifie qu'on est sur la page des services
+        page = "service";
+        selectService(selectedService);
+    } else {
+        selectSecteur(selectedSecteur);
+    }
+    
+   
 };
 
 // RESIZE EVENT FOR MOBILE COMPATIBILITY
@@ -118,6 +167,32 @@ function previousSecteur() {
 }
 
 /**
+ * Sectionne le service suivant
+ * Si le service actuel est le dernier, on revient au premier
+ */
+function nextService() {
+    if(selectedService < lastservice_nb) {
+        selectedService++;
+    } else {
+        selectedService = 1;
+    }
+    selectService(selectedService);
+}
+
+/**
+ * Sectionne le service précédent
+ * Si le service actuel est le premier, on revient au dernier
+ */
+function previousService() {
+    if(selectedService > 1) {
+        selectedService--;
+    } else {
+        selectedService = lastservice_nb;
+    }
+    selectService(selectedService);
+}
+
+/**
  * Gère l'affichage des secteurs
  * @param {int} secteur : secteur selectionné
  */
@@ -138,6 +213,26 @@ function selectSecteur(secteur) {
 }
 
 /**
+ * Gère l'affichage des services
+ * @param {*} service  : service selectionné
+ */
+function selectService(service) {
+    if(service == 1) { // premier secteur selectionné
+        hide();
+        highlight("service"+lastservice_nb, "service1", "service2"); //Si le service selectionné est le premier, on montre le dernier service, le premier service et le second
+        
+
+    } else if(service == lastservice_nb) { // dernier service sélectionné
+        hide();
+        highlight("service" + (service-1), "service" + service, "service1"); // Montre : avant dernier, dernier, premier
+
+    } else { // Dans tous les autres cas
+        hide();
+        highlight("service" + (service-1), "service" + service, "service" + (service+1)); // Montre : avant, secteur, suivant
+    }
+}
+
+/**
  * Affiche et positionnne les secteurs selon le secteur selectionné
  * @param {*} left : secteur précédent le secteur sélectionné
  * @param {*} selected : le secteur sélectionné
@@ -145,21 +240,30 @@ function selectSecteur(secteur) {
  */
 function highlight(left, selected, right) {
 
-    // Positionnement des secteurs
+    // Positionnement des secteurs/services
     document.getElementById(left).setAttribute("style", "display: flex; bottom: 2vh; left: 5vw; width: 19vw; height: max(260px, " + sideSecteurHeight + "vh);");
     document.getElementById(selected).setAttribute("style", "display: flex; bottom: 1vh; left: 29vw; width: 22vw; height: max(270px, " + (sideSecteurHeight+2) + "vh); box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);");
     document.getElementById(right).setAttribute("style", "display: flex; bottom: 2vh; left: 56vw; width: 19vw; height: max(260px, " + sideSecteurHeight + "vh);");
 
-    // Affichage des infos du secteur
-    document.getElementById("secteur-name").innerHTML = secteur_infos[selected]["name"];
-    document.getElementById("secteur-description").innerHTML = secteur_infos[selected]["description"];
+    // Affichage des infos du secteur/service
+    if(page == "service") {
+        document.getElementById("secteur-name").innerHTML = service_infos[selected]["name"];
+        document.getElementById("secteur-description").innerHTML = service_infos[selected]["description"];
+    } else {
+        document.getElementById("secteur-name").innerHTML = secteur_infos[selected]["name"];
+        document.getElementById("secteur-description").innerHTML = secteur_infos[selected]["description"];
+    }
+    
 }
 
 /**
- * Cache tous les secteurs
+ * Cache tous les secteurs/services
  */
 function hide() {
-    for (i = 1; i <= lastsecteur_nb; i++) {
-        document.getElementById("secteur" + i).setAttribute("style", "display: none;");
+    last_elt = lastsecteur_nb;
+    if(page == "service") last_elt = lastservice_nb;
+
+    for (i = 1; i <= last_elt; i++) {
+        document.getElementById(page + i).setAttribute("style", "display: none;");
     }
 }
