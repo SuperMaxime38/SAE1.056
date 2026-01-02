@@ -27,6 +27,12 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
+.center_section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
     font-family: 'Questrial', sans-serif;
     display: flex;
@@ -42,30 +48,24 @@ body {
 }
 
 table {
-    width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0; 
-    margin-top: 0; 
-    background: transparent; 
-    box-shadow: none;
-    border: none;
-    backdrop-filter: none;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 th, td {
     padding: 12px 15px; 
     text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 th { 
     background-color: rgba(0,0,0,0.85); 
     color: white; 
+}
+
+td {
+    
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 th:first-child {
@@ -75,6 +75,15 @@ th:first-child {
 th:last-child {
     border-top-right-radius: 10px;
 }
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
 
 h3 {
     text-decoration: underline;
@@ -175,12 +184,6 @@ nav a:hover {
      filter: invert(49%) sepia(89%) saturate(1906%) hue-rotate(1deg) brightness(120%) contrast(110%) drop-shadow(0 0 0.75rem white);
 }
 
-.agences {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .agences h2 {
     text-align: center;
     color: rgb(var(--ob-orange));
@@ -265,7 +268,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 60px 5%;
+    padding: 60px 0;
     flex-wrap: wrap;
     align-items: stretch;
     box-sizing: border-box;
@@ -377,8 +380,7 @@ footer a { text-decoration: none; color: #888; }
 footer a:hover { color: rgb(var(--ob-orange)); }
 
 .secteurs {
-    width: 80%;
-    margin: 30px auto;
+    margin-top: 30px;
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
 }
@@ -427,15 +429,9 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 
 .secteur-description {
-    width: 80%;
-    margin: 30px auto;
+    margin-top: 30px;
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
-}
-
-#secteur-description {
-    width: 80%;
-    margin: auto;
 }
 
 @media screen and (max-width: 1100px) {
