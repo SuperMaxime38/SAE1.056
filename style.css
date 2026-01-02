@@ -464,6 +464,41 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     }
 }
 
+.demande_stage{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.demande_stage form{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+    margin-top: 3%;
+    background-color: #c0c0c1;
+    border-radius: 20px;
+}
+.demande_stage form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.demande_stage form div textarea{
+    border-radius: 10px;
+}
+.demande_stage form div input{
+    border-radius: 10px;
+    border: 1px solid rgb(118,118,118);
+    height: 40px;
+}
+.demande_stage form div select{
+    border-radius: 10px;
+    height: 40px;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
