@@ -234,14 +234,15 @@ nav a:hover {
     font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
 }
 
-.agences ul {
-    padding: 0;
+.agences li {
+    list-style: none;
 }
 
-.agences li {
+.agences ul {
     display: flex;
     justify-content: space-between;
     margin: 20px; 
+    padding: 0;
 }
 
 .agence-unselected {
