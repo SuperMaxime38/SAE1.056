@@ -490,6 +490,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .demande_stage form{
     margin-left: 10%;
     margin-right: 10%;
+
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 3%;
@@ -498,6 +499,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-top: 3%;
     background-color: #c0c0c1;
     border-radius: 20px;
+
 }
 .demande_stage form div{
     display: flex;
