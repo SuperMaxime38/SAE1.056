@@ -106,7 +106,6 @@ nav {
     align-items: center;
     background: rgba(0, 0, 0, 0.92);
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.15); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -343,14 +342,14 @@ nav a:hover {
     width: auto;
 }
 
-.newslette-form {
+.newsletter-form {
     display: flex;
     width: 100%; 
     height: 55px; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.newslette-form input {
+.newsletter-form input {
     flex-grow: 1; 
     width: 100%; 
     min-width: 0; 
@@ -363,7 +362,7 @@ nav a:hover {
     outline: none;
 }
 
-.newslette-form button {
+.newsletter-form button {
     background-color: rgb(var(--ob-orange));
     color: white;
     border: none;
@@ -376,21 +375,18 @@ nav a:hover {
     white-space: nowrap;
 }
 
-.newslette-form button:hover {
+.newsletter-form button:hover {
     background-color: black;
 }
 
 .newsletter-right {
-    flex: 1 1 300px;
     display: flex;
     align-items: center;
-    color: #222;
+    color: #ded9d9;
     line-height: 1.6;
     font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 16px;
 }
 
 .newsletter-text {
@@ -407,7 +403,7 @@ nav a:hover {
 
 footer {
     width: 100%; 
-    margin-top: auto;
+    margin-top: 30px;
     background-color: rgb(var(--ob-black));
     color: #bbb;
     padding: 50px 0;
@@ -479,26 +475,19 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
+<<<<<<< Updated upstream
     font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
+=======
+    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+    color: rgb(165, 96, 18);
+>>>>>>> Stashed changes
 }
 
-.demande_stage{
-    margin-right: 10%;
-    margin-left: 10%;
-}
 
 .demande_stage form{
-    margin-left: 10%;
-    margin-right: 10%;
 
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 3%;
-    margin-bottom: 3%;
-    padding-top: 3%;
-    margin-top: 3%;
-    background-color: #c0c0c1;
-    border-radius: 20px;
 
 }
 .demande_stage form div{
@@ -518,6 +507,12 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     border-radius: 10px;
     height: 40px;
 }
+
+.service-icon {
+                font-size: 30px;
+                margin-bottom: 10px;
+                display: block;
+            }
 
 @media screen and (max-width: 1100px) {
 
@@ -599,4 +594,24 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     #secteur-description {
         width: 100%;
     }
+}
+
+
+/* Définition de l'animation de mouvement vers la gauche */
+@keyframes pointeVersFormulaire {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px); /* Déplace la flèche de 10px vers la gauche */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Application de l'animation au survol du bloc parent */
+.newsletter-right:hover .icon-arrow-left {
+    animation: pointeVersFormulaire 1s infinite ease-in-out;
+    /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
 }
