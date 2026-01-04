@@ -184,12 +184,54 @@ nav a:hover {
      filter: invert(49%) sepia(89%) saturate(1906%) hue-rotate(1deg) brightness(120%) contrast(110%) drop-shadow(0 0 0.75rem white);
 }
 
+.transition-banner {
+    position: relative;
+    height: 30vh;
+    width: 100vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 60px 0;
+}
+
+.transition-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+}
+
+.transition-banner section h2 {
+    text-align: center;
+    margin: 6vh 0;
+    font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
+}
+
+.transition-banner section a {
+    position: absolute;
+    bottom: 1.5vh;
+    right: 1.5vw;
+    padding: 1.5vh 1.5vw;
+
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1rem, 1vw + 0.1vh + 0.25rem, 1.5rem);
+}
+
+.transition-banner section a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
 .agences h2 {
     text-align: center;
     color: rgb(var(--ob-orange));
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 20px;
-    font-size: clamp(0.25rem, 1vw + 1.25rem, 4.25rem);
+    font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
 }
 
 .agences ul {
@@ -204,7 +246,7 @@ nav a:hover {
 
 .agence-unselected {
     text-decoration: none;
-    font-size: clamp(0.1rem, 1vw + 0.9rem, 4rem); /* Permet d'adapter la taille du texte en fonction de la taille de l'écran (1vw+1rem permet de prendre en compte le niveau de zoom) */
+    font-size: clamp(1rem, 1vw + 0.9rem, 4rem); /* Permet d'adapter la taille du texte en fonction de la taille de l'écran (1vw+1rem permet de prendre en compte le niveau de zoom) */
     font-weight: bold;
     color: var(--ob-black); 
 }
@@ -213,7 +255,7 @@ nav a:hover {
     color: rgb(var(--ob-orange)); 
     font-weight: bold;
     text-decoration: none;
-    font-size: clamp(0.1rem, 1vw + 0.9rem, 4rem);
+    font-size: clamp(1rem, 1vw + 0.9rem, 4rem);
 }
 
 .agences-map-infos {
@@ -249,7 +291,11 @@ nav a:hover {
     margin: 20px;
     flex-grow: 2;
     height: fit-content;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.7rem);
+    font-size: clamp(0.8rem, 1vw + 0.1rem, 1.7rem);
+}
+
+.agences-infos table {
+    font-size: clamp(0.4rem, 1vw + 0.1rem, 1.7rem);
 }
 
 .agences-infos a {
@@ -285,7 +331,7 @@ nav a:hover {
 
 .newsletter-title {
     color: rgb(var(--ob-orange));
-    font-size: 9px;  
+    font-size: clamp(0.55rem, 0.9vw + 0.1rem, 1.7rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -311,7 +357,7 @@ nav a:hover {
     border: none;
     border-radius: 6px 0 0 6px; 
     padding-left: 20px;
-    font-size: 16px;
+    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
     color: #333;
     outline: none;
 }
@@ -322,7 +368,7 @@ nav a:hover {
     border: none;
     padding: 0 40px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(0.875rem, 0.9vw + 0.1rem, 1.7rem);
     cursor: pointer;
     border-radius: 0 6px 6px 0; 
     transition: background-color 0.3s;
@@ -339,7 +385,7 @@ nav a:hover {
     align-items: center;
     color: #222;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -349,7 +395,7 @@ nav a:hover {
 .newsletter-text {
     margin-top: 20px;
     padding-left: 7px;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 0.9vw + 0.1rem, 1.7rem);
     color: whitesmoke;
 }
 
@@ -405,7 +451,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     background-color: rgb(200, 200, 200);
     text-decoration: none;
     color: black;
-    font-size: clamp(0.5rem, 1vw + 0.4rem, 2rem);
+    font-size: clamp(1rem, 1vw + 0.4rem, 2rem);
 }
 
 .secteurs-slider h2 {
@@ -432,7 +478,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+    font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
 }
 
 .demande_stage{
@@ -513,6 +559,28 @@ footer a:hover { color: rgb(var(--ob-orange)); }
         align-items: center;
         text-align: center;
 
+    }
+
+    td {
+        padding: 4px 5px;
+    }
+
+    .agences-infos {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .transition-banner section h2 {
+        margin: 3vh 0;
+    }
+
+    .transition-banner section a {
+        position: static;
+        display: block;
+        text-align: center;
+        width: 30%;
+        margin: 20px auto;
+        padding: 1vh 0.5vw;
     }
 
 }

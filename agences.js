@@ -10,13 +10,13 @@ agences_data = {
     },
     
     "agence_2": {
-        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.532401793785!2d5.7309767891287455!3d45.19048085297762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af48b24ee5d87%3A0xf76d4b15a3cfc863!2sLa%20Fabrique%20-%20Orange%20Business!5e0!3m2!1sfr!2sfr!4v1764941966967!5m2!1sfr!2sfr",
-        "adresse": "69 rue des Poutres, 38000 Grenoble",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.966635974254!2d4.83461141597007!3d45.75506472566847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb8bf1d8b11f%3A0xd2c339c720c6a0f7!2sOrange%20Business!5e0!3m2!1sfr!2sfr!4v1767369713283!5m2!1sfr!2sfr",
+        "adresse": "13 Quai du Dr Gailleton, 69002 Lyon",
         "horaires": [
-            ["08:30-12:30","08:30-12:30","08:30-12:30","08:30-21:30","08:30-12:30","Fermé","Fermé"],
-            ["13:30-17:30","13:30-17:30","13:30-17:30","13:30-17:30","13:30-16:30","Fermé","Fermé"]
+            ["09:00","09:00","09:00","09:00","09:00","Fermé","Fermé"],
+            ["17:00","17:00","17:00","17:00","17:00","Fermé","Fermé"]
         ],
-        "tel": "+33 4 76 44 50 50"
+        "tel": "+33 4 76 45 56 67"
     },
     
     "agence_3": {
