@@ -475,12 +475,8 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-<<<<<<< Updated upstream
-    font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
-=======
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
     color: rgb(165, 96, 18);
->>>>>>> Stashed changes
 }
 
 
@@ -614,4 +610,5 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .newsletter-right:hover .icon-arrow-left {
     animation: pointeVersFormulaire 1s infinite ease-in-out;
     /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
+
 }
