@@ -46,12 +46,6 @@ body {
     overflow-x: hidden;     
 }
 
-main {
-    flex:1;
-    display: flex;
-    flex-direction: column;
-}
-
 table {
     border-collapse: collapse;
 }
@@ -191,7 +185,7 @@ nav a:hover {
 .transition-banner {
     position: relative;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     
     display: flex;
     align-items: center;
@@ -202,10 +196,13 @@ nav a:hover {
 
 .transition-banner img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 30vh;
+    height: 35vh;
+    border-radius: 30px;
+    width: 80%;
+}
+
+.transition-banner section {
+    width: 75%;
 }
 
 .transition-banner section h2 {
@@ -303,6 +300,12 @@ nav a:hover {
     font-size: clamp(0.4rem, 1vw + 0.1rem, 1.7rem);
 }
 
+.agences-infos a {
+    text-decoration: none;
+    color: var(--ob-black);
+    font-weight: 600;
+}
+
 .agences-infos a:hover {
     color: rgb(var(--ob-orange));
     text-decoration: underline;
@@ -311,9 +314,9 @@ nav a:hover {
 
 .newsletter-box {
     display: flex;
-    flex: 1;
     justify-content: center;
     gap: 30px;
+    padding: 60px 0;
     flex-wrap: wrap;
     align-items: stretch;
     box-sizing: border-box;
@@ -606,5 +609,4 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .newsletter-right:hover .icon-arrow-left {
     animation: pointeVersFormulaire 1s infinite ease-in-out;
     /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
-
 }
