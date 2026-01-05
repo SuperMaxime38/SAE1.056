@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <title>INSERER TITRE</title>
+        <title>Nos Services - Orange Business</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <style>
+            /* Petit ajout CSS inline pour gérer la taille des icones si pas dans style.css */
+            
+        </style>
     </head>
     <body>
-        <script type="text/javascript" src="secteurs_activite-services.js"></script>
+        <script src="secteurs_activite-services.js"></script>
         <nav class="navbar">
                 <a href="index.html">Accueil</a>
-                <a href="nos_secteurs.html">Nos secteurs</a>
+                <a href="nos_services.html">Nos services</a>
 
-                <img src="img_SAE/logo.png" >
+                <img src="img_SAE/logo.png" alt="Logo Orange Business">
 
                 <a href="secteurs_activite.html">Secteurs d'activité</a>
                 <a href="nous_rejoindre.html">Nous rejoindre</a>
@@ -36,98 +40,98 @@
                 <img src="img_SAE/Newsletter.png" alt="Newsletter">
             </a>
         </div>
-            
-        <!-- Les classes "secteurs" sont réutilisées pour les services -->
-        <section class="glass center_section secteurs"> <!-- Slider -->
-            <h1>Nos services</h1>
-            <div class="secteurs-slider">
-                <h2>Trouvez le service qui réponde à vos besoins</h2>
-                <div class="glass">
-                    <a href="#" onclick="previousService()"><</a>
-                    <a href="#" onclick="nextService()">></a>
-                </div>
-            </div>
-            <div class="secteurs-list">
-                <div class="glass" id="service1"> <!-- service 1-->
-                    <h3>A</h3>
-                    <p></p>
-                </div>
-                <div class="glass" id="service2"> <!-- service 2-->
-                    <h3>B</h3>
-                    <p></p>
 
+        <main>
+            <section class="glass center_section secteurs"> <h1>Nos services</h1>
+                <div class="secteurs-slider">
+                    <h2>Explorez nos expertises numériques</h2>
+                    <div class="glass">
+                        <a href="#" onclick="previousService()">&lt;</a>
+                        <a href="#" onclick="nextService()">></a>
+                    </div>
                 </div>
-                <div class="glass" id="service3"> <!-- service 3-->
-                    <h3>C</h3>
-                    <p></p>
+                <div class="secteurs-list">
+                    
+                    <div class="glass" id="service1"> 
+                        <i class="icon-shield service-icon"></i>
+                        <h3>Cybersécurité</h3>
+                        <p>Protection des données & Défense</p>
+                    </div>
 
+                    <div class="glass" id="service2"> 
+                        <i class="icon-cloud-upload service-icon"></i>
+                        <h3>Cloud & Réseaux</h3>
+                        <p>Connectivité mondiale & 5G</p>
+                    </div>
+
+                    <div class="glass" id="service3"> 
+                        <i class="icon-rocket service-icon"></i>
+                        <h3>Data & IA</h3>
+                        <p>Intelligence Artificielle & Big Data</p>
+                    </div>
+
+                    <div class="glass" id="service4"> 
+                        <i class="icon-people service-icon"></i>
+                        <h3>Expérience Client</h3>
+                        <p>Relation digitale omnicanale</p>
+                    </div>
+
+                    <div class="glass" id="service5"> 
+                        <i class="icon-screen-desktop service-icon"></i>
+                        <h3>Digital Workplace</h3>
+                        <p>Outils de collaboration modernes</p>
+                    </div>
+
+                    <div class="glass" id="service6"> 
+                        <i class="icon-compass service-icon"></i>
+                        <h3>Digital Consulting</h3>
+                        <p>Stratégie et accompagnement</p>
+                    </div>
+
+                    <div class="glass" id="service7"> 
+                        <i class="icon-globe service-icon"></i>
+                        <h3>Infrastructure</h3>
+                        <p>Solutions globales</p>
+                    </div>
                 </div>
-                <div class="glass" id="service4"> <!-- service 4-->
-                    <h3>D</h3>
-                    <p></p>
+                
+            </section>
 
-                </div>
-                <div class="glass" id="service5"> <!-- service 5-->
-                    <h3>E</h3>
-                    <p></p>
+            <section class="glass center_section secteur-description"> <h2 id="secteur-name">Bienvenue chez Orange Business</h2>
+                <p id="secteur-description">
+                    Nous sommes l'intégrateur de services numériques du futur. 
+                    De la cybersécurité à l'intelligence artificielle, nous accompagnons les entreprises 
+                    pour qu'elles soient plus performantes et sécurisées. 
+                    Cliquez sur les services ci-dessus pour découvrir nos métiers !
+                </p>
+            </section>
 
-                </div>
-                <div class="glass" id="service6"> <!-- service 6-->
-                    <h3>F</h3>
-                    <p></p>
-
-                </div>
-                <div class="glass" id="service7"> <!-- service 7-->
-                    <h3>G</h3>
-                    <p></p>
-
-                </div>
-            </div>
-            
-        </section>
-
-        <section class="glass center_section secteur-description"> <!-- Description service-->
-            <h2 id="secteur-name"></h2>
-            <p id="secteur-description"></p>
-        </section>
-
-        <section class="glass center_section secteur-description">
-            <h2>Témoignage client</h2>
-            <p>Orange, c'est super !</p>
-        </section>
+            <section class="glass center_section secteur-description">
+                <h2>Ils nous font confiance</h2>
+                <p>"Grâce à l'expertise d'Orange Business, nous avons sécurisé nos données critiques et modernisé notre façon de travailler."</p>
+            </section>
+        </main>
 
         <footer>  
             <div>
-                    <h4>Nos services</h4>
-                     <ul>
-                        <li><a href="#">Service1</a></li>
-                        <li><a href="#">Service2</a></li>
-                        <li><a href="#">Secteur3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>secteurs d'activité</h4>
-                    <ul>
-                        <li><a href="#">S1</a></li>
-                        <li><a href="#">S2</a></li>
-                        <li><a href="#">S3</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>À propos</h4>
-                    <a href="#">Qui sommes nous?</a>
-                </div>
-                <div>
-                    <h4>Nous contacter</h4>
-                    <a href="#">Formulaire contact</a>
-                </div>
+                <h4>Nos services</h4>
+                <a href="nos_services.html">Voir nos services</a>
+            </div>
             
-                <div>
-                     <div>
-                        <h4>Nos Réseaux</h4>
-                     </div>
-                </div>
+            <div>
+                <h4>Secteurs d'activité</h4>
+                <a href="secteurs_activite.html">Voir les secteurs d'activité</a>
+            </div>
+
+
+            <div>
+                <h4>À propos</h4>
+                <a href="#">Qui sommes nous?</a>
+            </div>
+            <div>
+                <h4>Nous contacter</h4>
+                <a href="#">Formulaire de contact</a>
+            </div>
         </footer>
     </body>
 </html>

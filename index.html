@@ -7,18 +7,17 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
     </head>
     <body>
-      <script type="text/javascript" src="agences.js"></script>
+      <script src="agences.js"></script>
         <nav class="navbar">
                 <a href="index.html">Accueil</a>
                 <a href="nos_services.html">Nos services</a>
 
-                <img src="img_SAE/logo.png" >
+                <img src="img_SAE/logo.png" alt="Logo d'Orange Business">
 
-                <a href="secteurs_activite.html">Secteur d'activité</a>
+                <a href="secteurs_activite.html">Secteurs d'activité</a>
                 <a href="nous_rejoindre.html">Nous rejoindre</a>
         </nav>
-
-
+        
         <div class="Resbar glass">
             <a href="https://www.instagram.com/orangebusiness/" target="_blank">
                 <img src="img_SAE/Instagram.png" alt="Instagram">
@@ -36,20 +35,27 @@
                 <img src="img_SAE/Newsletter.png" alt="Newsletter">
             </a>
         </div>
-            
-        <section> <!-- TRANSITION ECOLOGIQUE -->
-            
-        </section>
+
+        <main>
+        
+        <div class="transition-banner"> <!-- TRANSITION ECOLOGIQUE -->
+            <img src="img_SAE/mountain.png" alt="Transition écologique">
+            <section class="glass center_section">
+                <h2>Orange, notre réseau, votre planète</h2>
+                <a href="transition_ecologique.html" class="glass">En savoir plus</a>
+            </section>
+
+        </div>
             
         <section class="agences glass center_section" id="agences"> <!-- AGENCES -->
             <h2>Nous retrouver dans nos plus grandes agences</h2>
-            <li>
-                <ul> <a href="#" onclick="selectAgence(1)" class="agence-selected" id="agence-1"><i class="icon icon-location-pin"></i> Agence 1</a></ul>
-                <ul> <a href="#" onclick="selectAgence(2)" class="agence-unselected" id="agence-2"><i class="icon icon-location-pin"></i> Agence 2</a></ul>
-                <ul> <a href="#" onclick="selectAgence(3)" class="agence-unselected" id="agence-3"><i class="icon icon-location-pin"></i> Agence 3</a></ul>
-                <ul> <a href="#" onclick="selectAgence(4)" class="agence-unselected" id="agence-4"><i class="icon icon-location-pin"></i> Agence 4</a></ul>
-                <ul> <a href="#" onclick="selectAgence(5)" class="agence-unselected" id="agence-5"><i class="icon icon-location-pin"></i> Agence 5</a></ul>
-            </li>
+            <ul>
+                <li> <a href="#" onclick="selectAgence(1)" class="agence-selected" id="agence-1"><i class="icon icon-location-pin"></i> Agence 1</a></li>
+                <li> <a href="#" onclick="selectAgence(2)" class="agence-unselected" id="agence-2"><i class="icon icon-location-pin"></i> Agence 2</a></li>
+                <li> <a href="#" onclick="selectAgence(3)" class="agence-unselected" id="agence-3"><i class="icon icon-location-pin"></i> Agence 3</a></li>
+                <li> <a href="#" onclick="selectAgence(4)" class="agence-unselected" id="agence-4"><i class="icon icon-location-pin"></i> Agence 4</a></li>
+                <li> <a href="#" onclick="selectAgence(5)" class="agence-unselected" id="agence-5"><i class="icon icon-location-pin"></i> Agence 5</a></li>
+                </ul>
             <div class="agences-map-infos ">
                 <iframe id="agence_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.532401793785!2d5.7309767891287455!3d45.19048085297762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af48b24ee5d87%3A0xf76d4b15a3cfc863!2sLa%20Fabrique%20-%20Orange%20Business!5e0!3m2!1sfr!2sfr!4v1764941966967!5m2!1sfr!2sfr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -57,7 +63,7 @@
                     <h3>Informations sur l'agence</h3>
                     <p id="agence_adresse">Adresse: 29 rue Servan, 38000 Grenoble</p>
                     <table>
-                        <thead>
+                        <tr>
                             <th>Lundi</th>
                             <th>Mardi</th>
                             <th>Mercredi</th>
@@ -65,7 +71,7 @@
                             <th>Vendredi</th>
                             <th>Samedi</th>
                             <th>Dimanche</th>
-                        </thead>
+                        </tr>
                         <tr id="morning">
                             <td>08:30-12:30</td>
                             <td>08:30-12:30</td>
@@ -93,45 +99,37 @@
         </section>
 
 
-        <div class="newsletter-box center_section"> <!-- NEWSLETTER -->
+        <div id="newsletter" class="newsletter-box center_section"> 
+    
             <div class="newsletter-left glass">
-                <div class="newsletter-title">S'inscrire à la newsletter</div>
+                <div class="newsletter-title">Restez connecté</div>
 
-                <form class="newslette-form">
-                     <input type="email" placeholder= "exemple@gmail.com">
-                     <button type="submit">S'inscrire</button>
-
+                <form class="newsletter-form">
+                        <input type="email" placeholder="votre-email@exemple.com" required>
+                        <button type="submit">S'inscrire</button>
                 </form>
 
                 <div class="newsletter-text">
-                     Ne ratez plus aucune nouveauté chez OrangeBusiness avec notre newsletter
+                        Recevez les dernières actus d'Orange Business directement dans votre boîte mail.
                 </div>
-
             </div>
 
             <div class="newsletter-right glass">
-                Rejoignez notre newsletter !
+                <i class="icon-arrow-left" style="font-size: 30px; margin-right: 10px;"></i>
+                <span>Rejoignez notre newsletter !</span>
             </div>
 
         </div>
 
-
+        </main>
         <footer>  
             <div>
                     <h4>Nos services</h4>
-                     <ul>
-                        <li><a href="#">Service1</a></li>
-                        <li><a href="#">Service2</a></li>
-                        <li><a href="#">Service3</a></li>
-                    </ul>
+                     <a href="nos_services.html">Voir nos services</a>
                 </div>
                 <div>
                     <h4>Secteurs d'activité</h4>
-                    <ul>
-                        <li><a href="#">S1</a></li>
-                        <li><a href="#">S2</a></li>
-                        <li><a href="#">S3</a></li>
-                    </ul>
+                     <a href="secteurs_activite.html">Voir les secteurs d'activité</a>
                 </div>
 
                 <div>
@@ -140,7 +138,7 @@
                 </div>
                 <div>
                     <h4>Nous contacter</h4>
-                    <a href="#">Formulaire contact</a>
+                    <a href="#">Formulaire de contact</a>
                 </div>
         </footer>
     </body>

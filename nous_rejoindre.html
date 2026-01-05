@@ -10,9 +10,9 @@
                 <a href="index.html">Accueil</a>
                 <a href="nos_services.html">Nos services</a>
 
-                <img src="img_SAE/logo.png" >
+                <img src="img_SAE/logo.png" alt="Logo d'Orange Business">
 
-                <a href="secteurs_activite.html">Secteur d'activité</a>
+                <a href="secteurs_activite.html">Secteurs d'activité</a>
                 <a href="nous_rejoindre.html">Nous rejoindre</a>
         </nav>
 
@@ -35,75 +35,69 @@
             </a>
         </div>
         
+        <main>
+            <div class="demande_stage glass center_section" id="stage">
+                <form>
+                    <h2>Demande de stage</h2>
+                    <div>
+                        <label for="nom">Nom</label>
+                        <input id="nom" type="text" name="nom">
+                    </div>
 
+                    <div>
+                        <label for="Prénom">Prénom</label>
+                        <input id="Prénom" type="text" name="Prénom">
+                    </div>
 
+                    <div>
+                        <label for="Adresse">Adresse e-mail</label>
+                        <input id="Adresse" type="text" name="Adresse">
+                    </div>
 
-        <div class="demande_stage glass" id="stage">
-            <form>
-                <h2>Demande de stage</h2>
-                <div>
-                    <label for="nom">Nom</label>
-                    <input id="nom" type="text" name="nom">
-                </div>
+                    <div>
+                        <label for="lettremotiv">Lettre de motivation</label>
+                        <textarea id="lettremotiv" name="lettremotiv" rows="7"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="domaine">Domaine</label>
+                        <select id="domaine" name="domaine">
+                        <option value="Infrastructure_Digitale">Infrastructure Digitale</option>
+                        <option value="Data_&_IA">Data & IA</option>
+                        <option value="Confiance_Numerique">Confiance Numérique</option>
+                        <option value="Numérique_Responsable">Numérique Responsable</option>
+                        <option value="Cybersécurité">Cybersécurité</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label for="Prénom">Prénom</label>
-                    <input id="Prénom" type="text" name="Prénom">
-                </div>
-
-                <div>
-                    <label for="Adresse">Adresse e-mail</label>
-                    <input id="Adresse" type="text" name="Adresse">
-                </div>
-
-                <div>
-                    <label for="lettremotiv">Lettre de motivation</label>
-                    <textarea id="lettremotiv" name="lettremotiv" rows="7"></textarea>
-                </div>
-                
-                <div>
-                    <label for="domaine">Domaine</label>
-                    <select id="domaine" name="domaine">
-                    <option value="Infrastructure_Digitale">Infrastructure Digitale</option>
-                    <option value="Data_&_IA">Data & IA</option>
-                    <option value="Confiance_Numerique">Confiance Numérique</option>
-                    <option value="Numérique_Responsable">Numérique Responsable</option>
-                    <option value="Cybersécurité">Cybersécurité</option>
-                    </select>
-                </div>
-
-                <div>
-                    <input type="submit" value="Envoyer">
-                </div>
-            </form>
-        </div>
+                    <div>
+                        <input type="submit" value="Envoyer">
+                    </div>
+                </form>
+            </div>
+        </main>
         
         <footer>  
             <div>
-                    <h4>Nos services</h4>
-                     <ul>
-                        <li><a href="#">Service1</a></li>
-                        <li><a href="#">Service2</a></li>
-                        <li><a href="#">Service3</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Secteurs d'activité</h4>
-                    <ul>
-                        <li><a href="#">S1</a></li>
-                        <li><a href="#">S2</a></li>
-                        <li><a href="#">S3</a></li>
-                    </ul>
-                </div>
+                <h4>Nos services</h4>
+                <a href="nos_services.html">Voir nos services</a>
+            </div>
+            
+            <div>
+                <h4>Secteurs d'activité</h4>
+                <a href="secteurs_activite.html">Voir les secteurs d'activité</a>
+            </div>
 
-                <div>
-                    <h4>À propos</h4>
-                    <a href="#">Qui sommes nous?</a>
-                </div>
-                <div>
-                    <h4>Nous contacter</h4>
-                    <a href="#">Formulaire contact</a>
-                </div>
+
+            <div>
+                <h4>À propos</h4>
+                <a href="#">Qui sommes nous?</a>
+            </div>
+            <div>
+                <h4>Nous contacter</h4>
+                <a href="#">Formulaire de contact</a>
+            </div>
+
         </footer>
     </body>
 </html>

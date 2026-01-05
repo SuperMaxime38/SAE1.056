@@ -112,7 +112,12 @@ window.onload = function() {
 // RESIZE EVENT FOR MOBILE COMPATIBILITY
 window.onresize = function() {
     checkResize();
-    selectSecteur(selectedSecteur);
+
+    if(page == "secteur") {
+        selectSecteur(selectedSecteur);
+    } else {
+        selectService(selectedService);
+    }
 }
 
 
