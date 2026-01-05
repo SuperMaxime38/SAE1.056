@@ -29,7 +29,8 @@
 
 .center_section {
     width: 80%;
-    margin: 30px auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -40,16 +41,9 @@ body {
     min-height: 100vh;
     background: url(img_SAE/bg.png); 
     background-repeat: no-repeat;
-    background-position: center center;
     background-attachment: fixed; 
     background-size: cover;  
     overflow-x: hidden;     
-}
-
-main {
-    flex:1;
-    display: flex;
-    flex-direction: column;
 }
 
 table {
@@ -191,7 +185,7 @@ nav a:hover {
 .transition-banner {
     position: relative;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     
     display: flex;
     align-items: center;
@@ -202,10 +196,13 @@ nav a:hover {
 
 .transition-banner img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 30vh;
+    height: 35vh;
+    border-radius: 30px;
+    width: 80%;
+}
+
+.transition-banner section {
+    width: 75%;
 }
 
 .transition-banner section h2 {
@@ -286,8 +283,6 @@ nav a:hover {
 .agences-map-infos div a { /* lien telephone */
     text-decoration: none;
     margin-top: 20px;
-    color: var(--ob-black);
-    font-weight: 600;
 }
 
 .agences-infos {
@@ -305,6 +300,12 @@ nav a:hover {
     font-size: clamp(0.4rem, 1vw + 0.1rem, 1.7rem);
 }
 
+.agences-infos a {
+    text-decoration: none;
+    color: var(--ob-black);
+    font-weight: 600;
+}
+
 .agences-infos a:hover {
     color: rgb(var(--ob-orange));
     text-decoration: underline;
@@ -313,9 +314,9 @@ nav a:hover {
 
 .newsletter-box {
     display: flex;
-    flex: 1;
     justify-content: center;
     gap: 30px;
+    padding: 60px 0;
     flex-wrap: wrap;
     align-items: stretch;
     box-sizing: border-box;
@@ -422,40 +423,6 @@ footer li { margin-bottom: 10px; }
 footer a { text-decoration: none; color: #888; }
 footer a:hover { color: rgb(var(--ob-orange)); }
 
-.transition-eco {
-    background: url("img_SAE/mountain.png") no-repeat center center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3vh;
-    padding-bottom: 3vh;
-}
-
-.transition-eco h1 {
-    font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
-}
-.transition-eco h2 {
-    font-size: clamp(1.1rem, 0.9vw + 1rem, 2.25rem);
-}
-
-.transition-eco div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    padding: 30px;
-}
-
-.transition-eco div p {
-    padding-right: 5vw;
-    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
-}
-
-.transition-eco div img {
-    width: clamp(200px, 20vw, 500px);
-    border-radius: 3rem;
-}
-
 .secteurs {
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
@@ -507,25 +474,10 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .secteur-description {
     margin-top: 30px;
     text-align: center;
-    font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
+    font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
     color: rgb(165, 96, 18);
 }
 
-.nous_rejoindre {
-    text-align: center;
-}
-
-.nous_rejoindre h1 {
-    font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
-}
-.nous_rejoindre p {
-    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
-}
-
-.demande_stage{
-    margin-right: 10%;
-    margin-left: 10%;
-}
 
 .demande_stage form{
 
@@ -548,37 +500,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 .demande_stage form div select{
     border-radius: 10px;
-    height: 40px;
-}
-
-.service-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-
-.a_propos div {
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-.nous_contacter form{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 3%;
-    margin-bottom: 3%;
-    padding-top: 3%;
-    margin-top: 3%;
-}
-.nous_contacter form div{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.nous_contacter form div input{
-    border-radius: 10px;
-    border: 1px solid rgb(118,118,118);
     height: 40px;
 }
 
@@ -682,5 +603,4 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .newsletter-right:hover .icon-arrow-left {
     animation: pointeVersFormulaire 1s infinite ease-in-out;
     /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
-
 }
