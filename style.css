@@ -29,8 +29,7 @@
 
 .center_section {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto; 
 }
 
 body {
@@ -287,6 +286,8 @@ nav a:hover {
 .agences-map-infos div a { /* lien telephone */
     text-decoration: none;
     margin-top: 20px;
+    color: var(--ob-black);
+    font-weight: 600;
 }
 
 .agences-infos {
@@ -304,12 +305,6 @@ nav a:hover {
     font-size: clamp(0.4rem, 1vw + 0.1rem, 1.7rem);
 }
 
-.agences-infos a {
-    text-decoration: none;
-    color: var(--ob-black);
-    font-weight: 600;
-}
-
 .agences-infos a:hover {
     color: rgb(var(--ob-orange));
     text-decoration: underline;
@@ -321,7 +316,6 @@ nav a:hover {
     flex: 1;
     justify-content: center;
     gap: 30px;
-    padding: 60px 0;
     flex-wrap: wrap;
     align-items: stretch;
     box-sizing: border-box;
@@ -403,11 +397,6 @@ nav a:hover {
     color: whitesmoke;
 }
 
-.agences-infos a{
-    margin-top: 30px;
-    display: inline-block;
-}
-
 footer {
     width: 100%; 
     margin-top: 30px;
@@ -468,7 +457,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 
 .secteurs {
-    margin-top: 30px;
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
 }
@@ -523,6 +511,17 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     color: rgb(165, 96, 18);
 }
 
+.nous_rejoindre {
+    text-align: center;
+}
+
+.nous_rejoindre h1 {
+    font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
+}
+.nous_rejoindre p {
+    font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
+}
+
 .demande_stage{
     margin-right: 10%;
     margin-left: 10%;
@@ -552,9 +551,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     height: 40px;
 }
 
-.a_propos{
-    margin-bottom: 30px;
-}
 .service-icon {
     font-size: 30px;
     margin-bottom: 10px;
