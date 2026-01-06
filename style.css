@@ -27,6 +27,17 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
+section .citation_pdg{
+    margin-left: 5%;
+    margin-right: 3%;
+}
+section .signature1{
+    margin-bottom: 0px;
+}
+section .signature2{
+    margin-top: 0px;
+}
+
 .center_section {
     width: 80%;
     margin: 30px auto; 
@@ -725,5 +736,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 .newsletter-right:hover .icon-arrow-left {
     animation: pointeVersFormulaire 1s infinite ease-in-out;
     /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
+
 
 }
