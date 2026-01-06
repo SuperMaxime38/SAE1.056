@@ -419,7 +419,7 @@ footer a { text-decoration: none; color: #888; }
 footer a:hover { color: rgb(var(--ob-orange)); }
 
 .transition-eco {
-    background: url("img_SAE/mountain.png") no-repeat center center;
+    background: url("img_SAE/mountain.png") no-repeat center center / cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -546,7 +546,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-bottom: 40px;
 }
 .secteur-description div section{
-    width: 60%;
+    width: 70%;
     height: 100%;
     display:flex;
     align-items: center;
@@ -567,7 +567,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 .secteur-description div section img {     
     height: 15vh;/* L'image prend toute la hauteur de la section */
-    width: auto;        /* La largeur s'adapte pour ne pas écraser l'image */ /* Coupe les bords qui dépassent pour garder les proportions */
+    width: 12vw;
     border-radius: 35px;
 }
 
