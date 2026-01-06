@@ -38,10 +38,10 @@ body {
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
-    background: url(img_SAE/bg.png); 
+    background-image: url("img_SAE/background.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
     background-attachment: fixed; 
+    background-position: center;
     background-size: cover;  
     overflow-x: hidden;     
 }
@@ -92,7 +92,6 @@ tr:last-child td:last-child {
 
 h3 {
     text-decoration: underline;
-    /* border-bottom: 3px solid rgb(var(--ob-orange)); */ /* JSP pk ya ça donc on l'enlève ! */
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -202,10 +201,9 @@ nav a:hover {
 
 .transition-banner img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
     height: 30vh;
+    width: 80.5%;
+    border-radius: 30px;
 }
 
 .transition-banner section h2 {
@@ -383,7 +381,7 @@ nav a:hover {
 .newsletter-right {
     display: flex;
     align-items: center;
-    color: #ded9d9;
+    color: #f9f7f7;
     line-height: 1.6;
     font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
     justify-content: center;
@@ -394,7 +392,7 @@ nav a:hover {
     margin-top: 20px;
     padding-left: 7px;
     font-size: clamp(0.8rem, 0.9vw + 0.1rem, 1.7rem);
-    color: whitesmoke;
+    color: rgb(244, 242, 242);
 }
 
 .agences-infos a{
@@ -462,7 +460,12 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
 }
-
+.secteurs h1{
+    color: rgb(246, 246, 245);
+}
+.secteurs h2{
+    color: rgb(246, 246, 245);
+}
 .secteurs-slider{
     display: flex;
     justify-content: center;
@@ -511,18 +514,27 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-bottom: 30px;
     text-align: center;
     font-size: clamp(0.1rem, 1vw + 0.2rem, 1.7rem);
-    color: rgb(165, 96, 18);
+    color: rgb(17, 17, 16);
 }
+
+.secteur-description h2 {
+    color: rgb(246, 246, 245);
+}
+
 
 .nous_rejoindre {
     text-align: center;
+    
+    
 }
 
 .nous_rejoindre h1 {
     font-size: clamp(1.25rem, 1vw + 1.25rem, 4.25rem);
+    color: rgb(246, 246, 245);
 }
 .nous_rejoindre p {
     font-size: clamp(1rem, 1vw + 0.1rem, 2rem);
+    color: rgb(246, 246, 245);
 }
 
 .demande_stage{
@@ -537,16 +549,16 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     margin-bottom: 40px;
 }
 .secteur-description div section{
-
     width: 60%;
     height: 100%;
     display:flex;
     align-items: center;
 }
-.secteur-description div section h4{
+.secteur-description div section h3{
     position:absolute;
     left: 20px;
-    top: 10px;
+    top: 0px;
+    text-decoration: none;
 }
 
 .secteur-description div section p{
@@ -556,9 +568,9 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     padding-right: 15px;
 
 }
-.secteur-description div section img{
-    
-    height: 15vh;
+.secteur-description div section img {     
+    height: 15vh;/* L'image prend toute la hauteur de la section */
+    width: auto;        /* La largeur s'adapte pour ne pas écraser l'image */ /* Coupe les bords qui dépassent pour garder les proportions */
     border-radius: 35px;
 }
 
@@ -571,7 +583,7 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 
 .demande_stage form{
-
+    color: rgb(246, 246, 245);
     padding-left: 10%;
     padding-right: 10%;
 
@@ -623,6 +635,80 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     border-radius: 10px;
     border: 1px solid rgb(118,118,118);
     height: 40px;
+}
+
+
+
+/* --- Style spécifique pour l'avis client --- */
+
+.service-avis {
+    position: relative; /* Nécessaire pour placer la décoration en arrière-plan */
+    max-width: 800px;   /* Largeur max pour que ça ne soit pas trop étiré */
+    margin: 60px auto;  /* Centré au milieu de la page */
+    padding: 50px 40px;
+    text-align: center;
+    border-left: 5px solid #ff7900; /* La petite barre Orange sur le côté gauche */
+    overflow: hidden;
+    color: #f9f7f7; /* Empêche la grosse guillemet de dépasser si elle est trop grande */
+}
+
+/* La grosse guillemet décorative en arrière-plan */
+.service-avis::before {
+    content: "\201C";   /* Code spécial pour une guillemet ouvrante */
+    font-family: serif; /* Police avec empattement pour un style élégant */
+    font-size: 180px;   /* Très gros */
+    color: #dd6d0b;     /* Orange */
+    opacity: 0.35;      /* Très transparent pour rester discret */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 0;         /* Place l'élément DERRIÈRE le texte */
+    line-height: 1;
+}
+
+/* Le titre "Ils nous font confiance" */
+.service-avis h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-transform: uppercase; /* Met en majuscules */
+    letter-spacing: 2px;       /* Espacement entre les lettres */
+    position: relative;
+    z-index: 1;
+}
+
+/* Le texte de la citation (le premier paragraphe) */
+.service-avis p:nth-of-type(1) {
+    font-size: 1.3rem;  
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 300;
+    position: relative;
+    z-index: 1; /* Pour que le texte passe AU-DESSUS de la guillemet */
+    margin-bottom: 25px;
+}
+
+/* La signature (Valérie D.) - le deuxième paragraphe */
+.service-avis p:last-of-type {
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.775); /* Petit trait de séparation discret */
+    padding-top: 20px;
+    display: inline-block; /* Le trait s'adapte à la longueur du texte */
+    position: relative;
+    z-index: 1;
+}
+
+/* Le nom en gras et en Orange */
+.service-avis strong {
+    color: rgb(var(--ob-orange));
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Application de l'animation au survol du bloc parent */
+.newsletter-right:hover .icon-arrow-left {
+    animation: pointeVersFormulaire 1s infinite ease-in-out;
+    /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -695,14 +781,14 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 
 @media screen and (max-width: 1040px) {
-    #secteur-description {
+    .secteur-description {
         width: 90%;
     }
     
 }
 
 @media screen and (max-width: 700px) {
-    #secteur-description {
+    .secteur-description {
         width: 100%;
     }
 }
@@ -721,9 +807,3 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     }
 }
 
-/* Application de l'animation au survol du bloc parent */
-.newsletter-right:hover .icon-arrow-left {
-    animation: pointeVersFormulaire 1s infinite ease-in-out;
-    /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
-
-}

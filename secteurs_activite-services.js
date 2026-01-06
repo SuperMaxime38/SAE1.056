@@ -12,22 +12,22 @@ const secteur_infos = {
             "bulle1": {
                 "title": "Digital Consulting",
                 "text": "Nos équipes permettent aux entreprises d’exceller dans tous les domaines du numérique en les aidant à développer leur environnement numérique.",
-                "url": "img_SAE/images.jpg"
+                "url": "img_SAE/Digital_consulting.jpg"
             },
             "bulle2": {
                 "title": "SASE",
                 "text": "Les utilisateurs peuvent utiliser ce service où qu’ils soient. Grâce à notre service, les entreprises n’ont pas à s’occuper des serveurs et permettent facilement d’en augmenter leur nombre.",
-                "url": "img_SAE/images.jpg"
+                "url": "img_SAE/SASE.jpg"
             },
             "bulle3": {
                 "title": "Cloud Networking",
                 "text": "Notre cloud est flexible et rapide, les entreprises ne subissent pas de limitations liées au réseau lors de l’ajout de nouvelles applications. Les entreprises n’ont pas à se soucier des coûts liés à l’entretien des serveurs.",
-                "url": "img_SAE/images.jpg"
+                "url": "img_SAE/Cloud_networking.jpg"
             },
             "bulle4": {
                 "title": "Optimisation multicloud",
                 "text": "Nous adaptons l’infrastructure pour améliorer les performances et la rentabilité et permet au cloud* de fonctionner partout et tout le temps. Des serveurs de secours permettent aux services d’être disponibles en permanence même en cas de panne.",
-                "url": "img_SAE/images.jpg"
+                "url": "img_SAE/infrastructure.jpg"
             }
         }
     },
@@ -37,17 +37,17 @@ const secteur_infos = {
             "bulle1": {
                 "title": "Protéger vos données et créer des IA responsables",
                 "text": "L’arrivée de l’IA générative est un acteur majeur dans la transformation numérique des entreprises. L’IA décuple la productivité et transforme l’expérience des clients/collaborateurs. L’IA pose de nombreux défis (technologiques, éthiques, sécuritaires, organisationnels, etc.). Orange Business accompagne les entreprises avec des solutions et services de confiance pour réussir leur stratégie et leurs projets d’Intelligence Artificielle.",
-                "url": ""
+                "url": "img_SAE/Cadenas.jpg"
             },
             "bulle2": {
                 "title": "S’appuyer sur un socle d’infrastructure résilient et sécurisé",
                 "text": "La Data Architecture est le socle technique sur lequel s'appuient toutes les initiatives Data et IA. Elle permet de structurer, intégrer et gérer efficacement des volumes croissants de données provenant de diverses sources, tout en assurant la qualité, la cohérence, la sécurité et la conformité de ces données.",
-                "url": ""
+                "url": "img_SAE/Data_archi.jpg"
             },
             "bulle3": {
                 "title": "Choisir les services adaptés à la criticité de vos activités",
                 "text": "L'accompagnement Business permet de mettre en place outils/processus pour transformer les données brutes en information pertinente et stratégique, ce qui facilite la prise de décision.",
-                "url": ""
+                "url": "img_SAE/Accompagnement.jpg"
             }
         }
     },
@@ -55,14 +55,14 @@ const secteur_infos = {
         "name": "Expérience Employé",
         "content": {
             "bulle1": {
-                "title": "Mettre en place une solution de collaboration pensée pour les employés",
+                "title": "Une solution de collaboration pensée pour les employés",
                 "text": "Nous proposons des outils numériques adaptés aux usages de l’entreprise. Nous améliorons l’efficacité des employés en unifiant tous leurs outils numériques de gestion des clients, gestion des relations clients et le système téléphonique de l'entreprise. Nos experts aident les entreprises à mettre ces outils en place.",
-                "url": ""
+                "url": "img_SAE/Collab.jpg"
             },
             "bulle2": {
                 "title": "Garantir la satisfaction des employés",
                 "text": "Les entreprises peuvent visualiser l'opinion des employés sur leurs services, automatiser des tâches à l’aide de la robotisation.",
-                "url": ""
+                "url": "img_SAE/Satisfaction.jpg"
             }
         }
     },
@@ -72,12 +72,12 @@ const secteur_infos = {
             "bulle1": {
                 "title": "L'expérience client omnicanale et cognitive",
                 "text": "L’expérience client omnicanale veut dire qu’une entreprise communique avec ses clients par plusieurs moyens (site web, téléphone, réseaux sociaux, etc.) en même temps et de façon fluide. Avec l’aide de l’automatisation et des systèmes intelligents, les clients reçoivent des réponses rapides et personnalisées, peu importe le canal qu’ils utilisent.",
-                "url": ""
+                "url": "img_SAE/Contact_us.jpg"
             },
             "bulle2": {
                 "title": "Accélérer et sécuriser les choix technologiques",
                 "text": "Prendre des décisions technologiques rapides et sûres grâce à notre expertise, pour que nos client puisssent se concentrer sur leur activité principale.",
-                "url": ""
+                "url": "img_SAE/Com_client.jpg"
             }
         }
     },
@@ -87,17 +87,17 @@ const secteur_infos = {
             "bulle1": {
                 "title": "Choisir les services adaptés à la criticité de vos activités",
                 "text": "Certains échanges d’information (E-mail, vidéoconférence) sont plus importants que d'autres en entreprise (comme un conseil d'administration) il est donc nécessaire d’adapter les outils de communication en fonction de son importance. Orange accompagne les entreprises dans l’amélioration et l'installation de systèmes de sécurité adaptés.",
-                "url": ""
+                "url": "img_SAE/Cadenas.jpg"
             },
             "bulle2": {
                 "title": "Protéger vos données et créer des IA responsables",
-                "text": "Quand on navigue sur un site, les actions et données enregistrées par l’entreprise doivent être protégées contre un potentiel vol de données. Le respect du RGPD est obligatoire en Europe, Orange aide les sites internet à être plus sûrs pour protéger les utilisateurs de la fraude ainsi que pour respecter et appliquer la lois. L'Intelligence Artificielle doit être \"responsable\" : elle doit respecter les lois actuelles et être transparente, Orange aide à créer des IA qui respectent à la fois la loi et les droits des personnes.",
-                "url": ""
+                "text": "Quand on navigue sur un site, les actions et données enregistrées par l’entreprise doivent être protégées contre un potentiel vol de données.  Orange aide les sites internet à être plus sûrs pour protéger les utilisateurs de la fraude ainsi que pour respecter et appliquer la lois. L'Intelligence Artificielle doit respecter les lois actuelles et être transparente, Orange aide à créer des IA qui respectent à la fois la loi et les droits des personnes.",
+                "url": "img_SAE/IA.jpg"
             },
             "bulle3": {
                 "title": "S’appuyer sur un socle d’infrastructure résilient et sécurisé",
                 "text": "Orange Cyberdéfense aide les entreprises à surveiller, détecter et bloquer les attaques informatiques.",
-                "url": ""
+                "url": "img_SAE/Cyberdefense.jpg"
             }
         }
     },
@@ -107,7 +107,7 @@ const secteur_infos = {
             "bulle1": {
                 "title": "Sécuriser l'entreprise",
                 "text": "Grâce à la connaissance des tendances et des vulnérabilités, nous anticipons les menaces, évaluons les risques et élaborons des stratégies proactives pour renforcer les défenses de nos clients face aux cyberattaques et à leurs évolutions.",
-                "url": ""
+                "url": "img_SAE/Cybersecurite.jpg"
             }
         }
     },
@@ -117,52 +117,53 @@ const secteur_infos = {
             "bulle1": {
                 "title": "Les enjeux de Numérique Responsable",
                 "text": "Comprendre et mesurer son empreinte carbone et environnementale. La première étape d’une transformation responsable consiste à comprendre et mesurer l’empreinte de son activité. Orange propose des produits respectant les nouvelles réglementations et accompagne les entreprises voulant respecter ces réglementations.",
-                "url": ""
+                "url": "img_SAE/ecologie1.webp"
             },
             "bulle2": {
                 "title": "Utiliser l’IT au service de votre transition écologique",
                 "text": "Utiliser les technologies de l’internet au service de votre transition écologique. Orange Business propose des solutions utilisant des outils numériques pour optimiser l’efficacité énergétique.",
-                "url": ""
+                "url": "img_SAE/Ecologie3.jpg"
             },
             "bulle3": {
-                "title": "Favoriser des produits et services IT à impact environnemental réduit",
+                "title": "Favoriser des produits et services IT à impact réduit",
                 "text": "Orange travaille sur 3 sources afin de réduire la pollution numérique : nos équipements, nos infrastructures réseaux avec des infrastructures cloud optimisées, nos Data Centers en France et nous travaillons à l’optimisation de neuf Data Centers en Europe.",
-                "url": ""
+                "url": "img_SAE/Ecologie4.jpg"
             }
         }
     }
 };
 
+    
 const service_infos = {
     
     "service1": {
-        "name": "A",
-        "description": "aa"
+        "name": "Cybersécurité",
+        "description": "Expert en sécurité numérique, nous protégeons les entreprises contre les cyberattaques. Avec plus de 3000 experts, nous assurons une surveillance continue pour détecter les menaces, sécuriser les données sensibles et garantir la continuité de l'activité."
     },
     "service2": {
-        "name": "",
-        "description": ""
+        "name": "Cloud & Réseaux",
+        "description": "Nous fournissons l'infrastructure essentielle aux entreprises. Nos solutions Cloud sécurisées et nos réseaux mondiaux permettent une connexion rapide et flexible aux applications, facilitant le travail à distance et l'innovation technologique."
     },
     "service3": {
-        "name": "",
-        "description": ""
+        "name": "Data & IA",
+        "description": "Nous transformons les données en levier de performance. Nous aidons les entreprises à collecter et analyser leurs informations pour déployer des Intelligences Artificielles responsables, capables d'aider à la décision et d'optimiser les processus."
     },
     "service4": {
-        "name": "",
-        "description": ""
+        "name": "Expérience Client",
+        "description": "Nous optimisons la relation client grâce au numérique. Nos solutions permettent de gérer les interactions sur tous les canaux (web, mobile, voix) de manière fluide et automatisée, pour offrir un service plus réactif et personnalisé."
     },
     "service5": {
-        "name": "",
-        "description": ""
+        "name": "Digital Workplace",
+        "description": "Nous modernisons l'environnement de travail. Nous déployons des outils de collaboration (messagerie, visio) sécurisés qui favorisent le travail d'équipe et la mobilité, tout en améliorant l'expérience des employés au quotidien."
     },
     "service6": {
-        "name": "",
-        "description": ""
+        "name": "Digital Consulting",
+        "description": "Nous conseillons les entreprises dans leur transformation. Nos experts analysent les besoins métiers pour définir des stratégies numériques sur mesure, assurant que les investissements technologiques servent réellement la réussite de l'entreprise."
     },
     "service7": {
-        "name": "",
-        "description": ""
-    },
+        "name": "Infrastructure",
+        "description": "Nous assurons le socle technique des opérations. De l'hébergement sécurisé des données à la gestion des réseaux, nous fournissons des infrastructures résilientes et économes en énergie pour soutenir l'activité numérique durablement."
+    }
 
 };
 
@@ -347,14 +348,14 @@ function highlight(left, selected, right) {
             const content = secteur_infos[selected]["content"][contentKey];
             const section = document.createElement("section");
             section.className = "glass";
-            const h4 = document.createElement("h4");
-            h4.textContent = content["title"];
+            const h3 = document.createElement("h3");
+            h3.textContent = content["title"];
             const p = document.createElement("p");
             p.textContent = content["text"];
             const img = document.createElement("img");
             img.src = content["url"];
             img.alt = content["title"];
-            section.appendChild(h4);
+            section.appendChild(h3);
             section.appendChild(p);
             section.appendChild(img);
             document.getElementById("secteur-description").appendChild(section);
