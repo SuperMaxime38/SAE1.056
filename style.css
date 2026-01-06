@@ -1,19 +1,6 @@
 :root {
     --ob-orange: 255, 121, 0;
     --ob-black: 0, 0, 0;
-    --ob-dark-grey: 51, 51, 51;
-    --ob-white: 255, 255, 255;
-    --glass-bg: rgba(220, 212, 212, 0.35); 
-    --glass-border: rgba(255, 255, 255, 0.4); 
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    --glass-blur: blur(10px);
-
-    --lg-bg-color: rgba(255, 255, 255, 0.25);
-    --lg-highlight: rgba(255, 255, 255, 0.75);
-    --lg-text: #ffffff;
-    --lg-red: #fb4268;
-    --lg-grey: #444739;
-    --purple: rgb(159, 71, 170);
 }
 
 .glass {
@@ -25,6 +12,17 @@
     backdrop-filter: blur(4px);
     filter: url(#lensFilter) saturate(120%) brightness(1.15);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+section .citation_pdg{
+    margin-left: 5%;
+    margin-right: 3%;
+}
+section .signature1{
+    margin-bottom: 0px;
+}
+section .signature2{
+    margin-top: 0px;
 }
 
 .center_section {
@@ -112,7 +110,6 @@ nav {
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     transition: all 0.4s ease;
 }
 
@@ -523,9 +520,9 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 
 
 .nous_rejoindre {
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
-    
-    
 }
 
 .nous_rejoindre h1 {
@@ -572,14 +569,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     height: 15vh;/* L'image prend toute la hauteur de la section */
     width: auto;        /* La largeur s'adapte pour ne pas écraser l'image */ /* Coupe les bords qui dépassent pour garder les proportions */
     border-radius: 35px;
-}
-
-.nous_rejoindre {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
-    color: rgb(165, 96, 18);
 }
 
 .demande_stage form{
@@ -636,8 +625,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     border: 1px solid rgb(118,118,118);
     height: 40px;
 }
-
-
 
 /* --- Style spécifique pour l'avis client --- */
 
@@ -806,4 +793,3 @@ footer a:hover { color: rgb(var(--ob-orange)); }
         transform: translateX(0);
     }
 }
-

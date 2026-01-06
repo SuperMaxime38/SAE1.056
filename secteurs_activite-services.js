@@ -344,22 +344,39 @@ function highlight(left, selected, right) {
 
         document.getElementById("secteur-description").innerHTML = "";
 
-        for(const contentKey in secteur_infos[selected]["content"]) {
-            const content = secteur_infos[selected]["content"][contentKey];
+        // Pour chaque bulle du contenu du secteur sélectionné
+        for(const bulle in secteur_infos[selected]["content"]) {
+
+            // Récupère contenu de la bulle
+            const content = secteur_infos[selected]["content"][bulle];
+
+            //Création d'une section
             const section = document.createElement("section");
             section.className = "glass";
+
+            // Création d'un titre qui a pour texte la valeur 'title' de la bulle
             const h3 = document.createElement("h3");
             h3.textContent = content["title"];
+
+            //Création d'un paragraphe qui a pour texte la valeur 'text' de la bulle
             const p = document.createElement("p");
             p.textContent = content["text"];
+
+            //Création d'une image qui a pour source la valur 'url' de la bulle
             const img = document.createElement("img");
             img.src = content["url"];
-            img.alt = content["title"];
+            img.alt = content["title"]; // Texte alternatif de l'image
+
+            //Ajout des éléments à la section
             section.appendChild(h3);
             section.appendChild(p);
             section.appendChild(img);
+
+            //Ajout à la section "secteur-description" de la section nouvellement créée
             document.getElementById("secteur-description").appendChild(section);
         }
+
+        // En sortie de boucle, la section "secteur-description" contient le nombre de bulle que contient le secteur sélectionné
 
     }
     
