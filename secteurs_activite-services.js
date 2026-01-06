@@ -136,32 +136,32 @@ const secteur_infos = {
 const service_infos = {
     
     "service1": {
-        "name": "A",
-        "description": "aa"
+        "name": "Cybersécurité",
+        "description": "Orange Business gère et sécurise vos environnements mobiles, fluidifie votre parcours numérique et détecte proactivement les menaces pour assurer la protection de vos postes."
     },
     "service2": {
-        "name": "",
-        "description": ""
+        "name": "Cloud & Résaux",
+        "description": "Nos experts vous accompagnent dans une migration sécurisée et une optimisation multicloud, en combinant agilité, performance et maîtrise des coûts."
     },
     "service3": {
-        "name": "",
-        "description": ""
+        "name": "Data & IA",
+        "description": "Grâce aux données et à l’IA, Orange Business aide les entreprises à mieux décider et à améliorer leurs performances."
     },
     "service4": {
-        "name": "",
-        "description": ""
+        "name": "Expérience Client",
+        "description": "Unified Engagement Suite – NICE est une solution présentée par Orange Business qui permet d’analyser l’activité des clients et de gérer facilement les échanges en temps réel."
     },
     "service5": {
-        "name": "",
-        "description": ""
+        "name": "Digital Worplace",
+        "description": "Workplace Together Essentials est une solution cloud d’Orange Business qui permet de gérer la téléphonie et les visioconférences de façon simple, avec l’aide de professionnels."
     },
     "service6": {
-        "name": "",
-        "description": ""
+        "name": "Digital Consulting",
+        "description": "Orange Business accompagne les entreprises dans le Digital Consulting : gérer les réseaux, mobiles, voix et sécurité, surveiller les systèmes et améliorer les services grâce à l’expertise et aux outils professionnels."
     },
     "service7": {
-        "name": "",
-        "description": ""
+        "name": "Infrastructure",
+        "description": "Orange Business propose des solutions pour gérer et sécuriser tous les éléments informatiques d’une entreprise : réseaux, serveurs, cloud et applications, avec des outils et des experts pour améliorer la performance."
     },
 
 };
@@ -343,22 +343,39 @@ function highlight(left, selected, right) {
 
         document.getElementById("secteur-description").innerHTML = "";
 
-        for(const contentKey in secteur_infos[selected]["content"]) {
-            const content = secteur_infos[selected]["content"][contentKey];
+        // Pour chaque bulle du contenu du secteur sélectionné
+        for(const bulle in secteur_infos[selected]["content"]) {
+
+            // Récupère contenu de la bulle
+            const content = secteur_infos[selected]["content"][bulle];
+
+            //Création d'une section
             const section = document.createElement("section");
             section.className = "glass";
+
+            // Création d'un h4 qui a la valeur 'titre' de la bulle
             const h4 = document.createElement("h4");
             h4.textContent = content["title"];
+
+            //Création d'un p qui a la valeur 'text' de la bulle
             const p = document.createElement("p");
             p.textContent = content["text"];
+
+            //Création d'une image qui a pour source la valur 'url' de la bulle
             const img = document.createElement("img");
             img.src = content["url"];
-            img.alt = content["title"];
+            img.alt = content["title"]; // Texte alternatif de l'image
+
+            // Ajout à la section des éléments créés
             section.appendChild(h4);
             section.appendChild(p);
             section.appendChild(img);
+
+            //Ajout à la section "secteur-description" de la section nouvellement créée
             document.getElementById("secteur-description").appendChild(section);
         }
+
+        // En sortie de boucle, la section "secteur-description" contient le nombre de bulle que contient le secteur sélectionné
 
     }
     
