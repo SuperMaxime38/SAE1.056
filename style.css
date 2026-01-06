@@ -1,19 +1,6 @@
 :root {
     --ob-orange: 255, 121, 0;
     --ob-black: 0, 0, 0;
-    --ob-dark-grey: 51, 51, 51;
-    --ob-white: 255, 255, 255;
-    --glass-bg: rgba(220, 212, 212, 0.35); 
-    --glass-border: rgba(255, 255, 255, 0.4); 
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    --glass-blur: blur(10px);
-
-    --lg-bg-color: rgba(255, 255, 255, 0.25);
-    --lg-highlight: rgba(255, 255, 255, 0.75);
-    --lg-text: #ffffff;
-    --lg-red: #fb4268;
-    --lg-grey: #444739;
-    --purple: rgb(159, 71, 170);
 }
 
 .glass {
@@ -92,7 +79,6 @@ tr:last-child td:last-child {
 
 h3 {
     text-decoration: underline;
-    /* border-bottom: 3px solid rgb(var(--ob-orange)); */ /* JSP pk ya ça donc on l'enlève ! */
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -113,7 +99,6 @@ nav {
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     transition: all 0.4s ease;
 }
 
@@ -515,7 +500,10 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 }
 
 .nous_rejoindre {
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
+    color: rgb(165, 96, 18);
 }
 
 .nous_rejoindre h1 {
@@ -560,14 +548,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     
     height: 15vh;
     border-radius: 35px;
-}
-
-.nous_rejoindre {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: clamp(1rem, 1vw + 0.2rem, 1.7rem);
-    color: rgb(165, 96, 18);
 }
 
 .demande_stage form{
@@ -623,6 +603,13 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     border-radius: 10px;
     border: 1px solid rgb(118,118,118);
     height: 40px;
+}
+
+/* Application de l'animation au survol du bloc parent */
+.newsletter-right:hover .icon-arrow-left {
+    animation: pointeVersFormulaire 1s infinite ease-in-out;
+    /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -719,11 +706,4 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     100% {
         transform: translateX(0);
     }
-}
-
-/* Application de l'animation au survol du bloc parent */
-.newsletter-right:hover .icon-arrow-left {
-    animation: pointeVersFormulaire 1s infinite ease-in-out;
-    /* 1s = durée, infinite = ne s'arrête pas tant qu'on survole */
-
 }
