@@ -767,20 +767,6 @@ footer a:hover { color: rgb(var(--ob-orange)); }
 
 }
 
-@media screen and (max-width: 1040px) {
-    .secteur-description {
-        width: 90%;
-    }
-    
-}
-
-@media screen and (max-width: 700px) {
-    .secteur-description {
-        width: 100%;
-    }
-}
-
-
 /* Définition de l'animation de mouvement vers la gauche */
 @keyframes pointeVersFormulaire {
     0% {
@@ -792,4 +778,5 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     100% {
         transform: translateX(0);
     }
+
 }
