@@ -337,11 +337,16 @@ function highlight(left, selected, right) {
 
     // Affichage des infos du secteur/service
     if(page == "service") {
+
+        // Si nous sommes dans la page "services", met à jour le titre de la description et son contenu (paragraphe)
         document.getElementById("secteur-name").innerHTML = service_infos[selected]["name"];
         document.getElementById("secteur-description").innerHTML = service_infos[selected]["description"];
     } else {
+        // Sinon nous sommes dans la page des secteurs d'activité
+        
         document.getElementById("secteur-name").innerHTML = secteur_infos[selected]["name"];
 
+        // Supprime tous les éléments de la description -> si on ne fait pas ça, en changeant de secteur on rajouterait sa description à la suite.
         document.getElementById("secteur-description").innerHTML = "";
 
         // Pour chaque bulle du contenu du secteur sélectionné
