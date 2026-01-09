@@ -26,7 +26,7 @@ const secteur_infos = {
             },
             "bulle4": {
                 "title": "Optimisation multicloud",
-                "text": "Nous adaptons l’infrastructure pour améliorer les performances et la rentabilité et permet au cloud* de fonctionner partout et tout le temps. Des serveurs de secours permettent aux services d’être disponibles en permanence même en cas de panne.",
+                "text": "Nous adaptons l’infrastructure pour améliorer les performances et la rentabilité et permet au cloud de fonctionner partout et tout le temps. Des serveurs de secours permettent aux services d’être disponibles en permanence même en cas de panne.",
                 "url": "img_SAE/infrastructure.jpg"
             }
         }
