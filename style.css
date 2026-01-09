@@ -14,17 +14,6 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-section .citation_pdg{
-    margin-left: 5%;
-    margin-right: 3%;
-}
-section .signature1{
-    margin-bottom: 0px;
-}
-section .signature2{
-    margin-top: 0px;
-}
-
 .center_section {
     width: 80%;
     margin: 30px auto; 
@@ -223,6 +212,17 @@ nav a:hover {
 .transition-banner section a:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+section .citation_pdg{
+    margin-left: 5%;
+    margin-right: 3%;
+}
+section .signature1{
+    margin-bottom: 0px;
+}
+section .signature2{
+    margin-top: 0px;
 }
 
 .agences h2 {
@@ -780,3 +780,4 @@ footer a:hover { color: rgb(var(--ob-orange)); }
     }
 
 }
+
